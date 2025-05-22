@@ -13,7 +13,7 @@ type ProfileCreateData = {
 type ProfileUpdateData = ProfileCreateData & { photoUrl?: string };
 
 export class DoctorService {
-  /* ---------- лікарі ⇄ сервіси ---------- */
+  /* ---------- лікарі  сервіси ---------- */
 
   async assignDoctorToService(serviceId: number, doctorId: number) {
     const service = await Service.findByPk(serviceId);

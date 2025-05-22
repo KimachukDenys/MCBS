@@ -29,7 +29,6 @@ class Service extends Model<ServiceAttributes, ServiceCreationAttributes> implem
   public categoryId!: number | null;
   public doctors?: User[]; 
   
-  // Додаємо асоціації для лікарів
   public addDoctor!: BelongsToManyAddAssociationMixin<User, number>;
   public removeDoctor!: BelongsToManyRemoveAssociationMixin<User, number>;
   public getDoctors!: BelongsToManyGetAssociationsMixin<User>;

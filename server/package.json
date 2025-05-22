@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev src/index.ts"
+    "build": "tsc",
+    "dev": "ts-node-dev src/index.ts && npm run sentry:sourcemaps",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org universe-qe --project node-express dist && sentry-cli sourcemaps upload --org universe-qe --project node-express dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@sentry/node": "^9.22.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "express": "^5.1.0",
@@ -23,6 +26,7 @@
     "tsyringe": "^4.10.0"
   },
   "devDependencies": {
+    "@sentry/cli": "^2.45.0",
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",

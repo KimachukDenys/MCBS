@@ -1,9 +1,10 @@
 "use strict";
+!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="43e6050b-9405-57ed-990d-4e28351a32e1")}catch(e){}}();
+
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// src/index.ts
 const app_1 = __importDefault(require("./app"));
 const models_1 = require("./models");
 const PORT = process.env.PORT || 5000;
@@ -20,3 +21,5 @@ const PORT = process.env.PORT || 5000;
         console.error('❌ Unable to connect to DB:', error);
     }
 })();
+//# sourceMappingURL=index.js.map
+//# debugId=43e6050b-9405-57ed-990d-4e28351a32e1

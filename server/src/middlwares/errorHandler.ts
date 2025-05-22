@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
+const Sentry = require("@sentry/node");
 
 export const errorHandler = (
   err: any,
@@ -7,6 +8,9 @@ export const errorHandler = (
   _next: NextFunction
 ): void => {
   console.error(err.stack);
+
+  Sentry.captureException(err);
+  Sentry.setupExpressErrorHandler(err);
 
   if (err.message.startsWith('ValidationError')) {
     res.status(400).json({ message: err.message.replace('ValidationError: ', '') });

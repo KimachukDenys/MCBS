@@ -1,4 +1,6 @@
 "use strict";
+!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="ed217fe5-e538-552b-adf9-d3d14540c572")}catch(e){}}();
+
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -39,6 +41,14 @@ User.init({
         type: sequelize_1.DataTypes.ENUM('patient', 'doctor', 'admin'),
         defaultValue: 'patient',
     },
+    gender: {
+        type: sequelize_1.DataTypes.ENUM('male', 'female'),
+        allowNull: true,
+    },
+    photoUrl: {
+        type: sequelize_1.DataTypes.STRING,
+        allowNull: true,
+    },
 }, {
     sequelize: database_1.default,
     modelName: 'User',
@@ -46,3 +56,5 @@ User.init({
     timestamps: true,
 });
 exports.default = User;
+//# sourceMappingURL=User.js.map
+//# debugId=ed217fe5-e538-552b-adf9-d3d14540c572

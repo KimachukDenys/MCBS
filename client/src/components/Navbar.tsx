@@ -20,7 +20,7 @@ const Navbar: React.FC<Props> = ({ id, role, onLogout, isAuthenticated, firstNam
 
   return (
     <nav
-      className="bg-primary text-background flex items-center justify-between"
+      className="bg-primary text-background flex items-center justify-between mb-5"
       style={{ paddingLeft: '150px', paddingRight: '150px', height: '105px' }}
     >
       <div>

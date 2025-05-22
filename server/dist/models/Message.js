@@ -36,3 +36,5 @@ Message.init({
     timestamps: true,
 });
 exports.default = Message;
+!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="73d473e2-f116-5f5e-b4e0-7b3b9a281b0f")}catch(e){}}();
+//# debugId=73d473e2-f116-5f5e-b4e0-7b3b9a281b0f
